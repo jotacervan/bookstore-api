@@ -1,14 +1,16 @@
+default_bio = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
 pub1 = PublishingHouse.create(name: "ABC Publisher", discount: 40)
 pub2 = PublishingHouse.create(name: "Acme Publishing House", discount: 50)
 pub3 = PublishingHouse.create(name: "Foobar Corporation", discount: 55)
 
-author1 = Author.create(name: "James Jackson")
-author2 = Author.create(name: "Roberta Rock")
-author3 = Author.create(name: "Daniel Duck")
-author4 = Author.create(name: "Amanda Djidjinski")
-author5 = Author.create(name: "Zoe Zack")
-author6 = Author.create(name: "Bill Burray")
-author7 = Author.create(name: "Charlie Chuck")
+author1 = Author.create(name: "James Jackson", bio: default_bio)
+author2 = Author.create(name: "Roberta Rock", bio: default_bio)
+author3 = Author.create(name: "Daniel Duck", bio: default_bio)
+author4 = Author.create(name: "Amanda Djidjinski", bio: default_bio)
+author5 = Author.create(name: "Zoe Zack", bio: default_bio)
+author6 = Author.create(name: "Bill Burray", bio: default_bio)
+author7 = Author.create(name: "Charlie Chuck", bio: default_bio)
 
 book1 = Book.create(title: "The Great Escape", author: author7, publisher: pub1, price: 24.20)
 book2 = Book.create(title: "Saving Myself", author: author6, publisher: pub1, price: 14.13)
