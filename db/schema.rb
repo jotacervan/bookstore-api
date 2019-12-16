@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2019_12_14_171048) do
     t.datetime "updated_at", null: false
     t.integer "github_id"
     t.boolean "from_github", default: false
-    t.text "bio"
+    t.text "biography"
   end
 
   create_table "books", force: :cascade do |t|

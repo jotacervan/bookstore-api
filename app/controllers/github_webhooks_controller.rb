@@ -17,9 +17,9 @@ class GithubWebhooksController < ActionController::Base
   def handle_issue(issue)
     author = Author.find_by(github_id: issue[:id])
     if author.present?
-      author.update(name: issue[:title], bio: issue[:body] )
+      author.update(name: issue[:title], biography: issue[:body] )
     else
-      author = Author.create(name: issue[:title], github_id: issue[:id], from_github: true, bio: issue[:body])
+      author = Author.create(name: issue[:title], github_id: issue[:id], from_github: true, biography: issue[:body])
       author.books.create(title: Faker::Book.title, publisher: author, price: 24.20)
     end
     author

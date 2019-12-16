@@ -8,7 +8,7 @@ namespace :github do
     count = authors.count
     authors.each_with_index do |author, i|
       print_percentage(authors, i, count)
-      issue = client.create_issue(ENV['GITHUB_REPO'], author.name, author.bio)
+      issue = client.create_issue(ENV['GITHUB_REPO'], author.name, author.biography)
       author.update(github_id: issue.id, from_github: true)
     end
     
