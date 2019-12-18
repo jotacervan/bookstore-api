@@ -14,7 +14,6 @@ class GithubWebhooksController < ActionController::Base
     else
       handle_issue(payload[:issue])
     end
-    render json: {}, status: :ok
   end
 
   # Inactivate author when closing issue
