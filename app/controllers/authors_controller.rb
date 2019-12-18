@@ -3,7 +3,7 @@ class AuthorsController < ApplicationController
 
   # GET /authors
   def index
-    @authors = Author.all
+    @authors = Author.where(active: true)
 
     render json: @authors, include: ['books']
   end

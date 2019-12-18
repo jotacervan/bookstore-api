@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_14_171048) do
+ActiveRecord::Schema.define(version: 2019_12_18_013820) do
 
   create_table "authors", force: :cascade do |t|
     t.string "name"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2019_12_14_171048) do
     t.integer "github_id"
     t.boolean "from_github", default: false
     t.text "biography"
+    t.boolean "active", default: true
   end
 
   create_table "books", force: :cascade do |t|
