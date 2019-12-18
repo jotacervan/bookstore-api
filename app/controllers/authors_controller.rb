@@ -3,7 +3,7 @@ class AuthorsController < ApplicationController
 
   # GET /authors
   def index
-    @authors = Author.all
+    @authors = Author.where(active: true)
 
     render json: @authors, include: ['books']
   end
@@ -46,6 +46,6 @@ class AuthorsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def author_params
-      params.require(:author).permit(:name)
+      params.require(:author).permit(:name, :biography, :github_id, :from_github)
     end
 end
