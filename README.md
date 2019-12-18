@@ -53,7 +53,12 @@ export GITHUB_CALLBACK_URL="http://2db927ba.ngrok.io/github_webhooks"
 
 ##### Create a GITHUB_REPO env with your issue's repository
 
-You can use "jotacervan/test-authors-bio", for testing.
+Create a new empty repository and point you env to it 
+ex:
+```sh
+export GITHUB_REPO="jotacervan/test-authors-bio".
+```
+*obs: It needs to be a repository that you have admin permissions*
 
 ##### Generate a secret to make your integration secure
 
